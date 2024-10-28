@@ -1,0 +1,96 @@
+/* 重置浏览器默认的边距和填充 */
+body, html {
+    margin: 0;                                       /* 移除默认的边距 */
+    padding: 0;                                     /* 移除默认的填充 */
+    overflow-x: hidden;                        /* 隐藏水平滚动条 */
+    background-image: url('background.png');     /* 设置背景图片 */
+    background-repeat: repeat-y;        /* 背景图片在垂直方向上重复 */
+    background-position: center top;  /* 背景图片位置在顶部居中 */
+    background-size: cover;                /* 背景图片覆盖整个容器 */
+}
+
+/* 搜索容器样式 */
+.search-container {
+    margin: 20px 20px;                 /* 上下外边距 */
+    text-align: center;                 /* 文本居中 */
+    border-radius: 10px;             /* 圆角边框 */
+}
+
+/* 搜索框样式 */
+#searchBox {
+    padding: 10px;                         /* 内填充 */
+    margin-right: 10px;                  /* 右外边距 */
+    width: 91%;                             /* 宽度 */
+    font-size: 16px;                        /* 字体大小 */
+    border-radius: 25px;                /* 圆角边框 */
+}
+
+/* 搜索按钮样式 */
+#searchButton {
+    padding: 10px 20px;                  /* 内填充 */
+    font-size: 16px;                         /* 字体大小 */
+    cursor: pointer;                         /* 鼠标样式为指针 */
+    border-radius: 25px;                 /* 圆角边框 */
+}
+
+/* 内容区域样式 */
+.content {
+    margin: 20px 20px;                      /* 上下外边距 */
+    padding: 20px;                       /* 内填充 */
+    border: 5px solid #ddd;              /* 边框样式 */
+    background-color: hsla(0,0%,100%,0.3);       /* 背景颜色透明 */
+    border-radius: 25px;                  /* 圆角边框 */
+
+}
+
+/* 链接样式 */
+a {
+    position: relative;                  /* 相对定位 */
+    text-decoration: none;               /* 移除下划线 */
+    color: inherit;                      /* 颜色继承自父元素 */
+    background-color: transparentF;  /* 背景颜色透明 */
+    font-weight: bold;                   /* 字体加粗 */
+    border: none;                        /* 移除边框 */
+    padding: 10px 20px;                  /* 内填充 */
+    cursor: pointer;                     /* 鼠标样式为指针 */
+    transition: background-color 0.3s, opacity 0.3s; /* 背景颜色和透明度过渡效果 */
+}
+
+a:hover {
+    background-color: transparent; /* 悬停时背景颜色 */
+}
+
+a:hover::after {
+    width: 100%; /* 悬停时伪元素宽度 */
+}
+
+a::after {
+    content: ''; /* 伪元素内容 */
+    color: #EEE; /* 伪元素文字颜色 */
+    display: block; /* 块级元素 */
+    width: 0; /* 初始宽度 */
+    height: 2px; /* 高度 */
+    background: #fff; /* 背景颜色 */
+    transition: width .3s; /* 过渡效果 */
+    position: absolute; /* 绝对定位 */
+    bottom: -5px; /* 底部对齐 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 精确居中 */
+}
+
+/* 锚点样式 */
+.anchor-target {
+    padding-top: 100px; /* 上内边距 */
+    margin-top: -100px; /* 上外边距 */
+    scroll-behavior: smooth; /* 平滑滚动 */
+}
+
+.tag {
+ background-color: #f0f0f0;
+ color: #000; /* 文字颜色 */
+ padding: 5px 10px; /* 内边距，可以根据需要调整 */
+ border-radius: 10px; /* 圆角边框 */
+ display: inline-block; /* 使标签根据内容自适应宽度 */
+ margin: 10px; /* 标签之间的间距 */
+ font-size: 15px; /* 字体大小 */
+}
